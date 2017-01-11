@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pmc-Mw-jZt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Ce5-Gy-5jp">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" id="pmc-Mw-jZt" customClass="ViewController" customModule="WatchLight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yhe-NY-xL1"/>
+                        <viewControllerLayoutGuide type="bottom" id="b7H-AA-Mgl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iwF-I5-f4j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kno-GM-mpS">
+                                <rect key="frame" x="125" y="263" width="124" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="Kjx-qP-0JG"/>
+                                    <constraint firstAttribute="width" constant="124" id="ep7-tn-0ca"/>
+                                </constraints>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Watch" translatesAutoresizingMaskIntoConstraints="NO" id="y7C-hZ-4Z1">
+                                <rect key="frame" x="110" y="247" width="154" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="0fl-6a-3l5"/>
+                                    <constraint firstAttribute="height" constant="172" id="J6n-nG-924"/>
+                                </constraints>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="rZC-KQ-EFJ">
+                                <rect key="frame" x="168" y="427" width="39" height="37"/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="pmc-Mw-jZt" eventType="valueChanged" id="Djp-jd-ezZ"/>
+                                </connections>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watch Glare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OB-Ri-KQe">
+                                <rect key="frame" x="16" y="60" width="343" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kno-GM-mpS" firstAttribute="centerY" secondItem="iwF-I5-f4j" secondAttribute="centerY" id="2Zl-7Z-Zlx"/>
+                            <constraint firstItem="kno-GM-mpS" firstAttribute="centerX" secondItem="iwF-I5-f4j" secondAttribute="centerX" id="5ac-ra-oUh"/>
+                            <constraint firstItem="3OB-Ri-KQe" firstAttribute="centerX" secondItem="kno-GM-mpS" secondAttribute="centerX" id="Egt-T4-TIR"/>
+                            <constraint firstItem="3OB-Ri-KQe" firstAttribute="leading" secondItem="iwF-I5-f4j" secondAttribute="leadingMargin" id="FQr-00-fcw"/>
+                            <constraint firstItem="rZC-KQ-EFJ" firstAttribute="top" secondItem="y7C-hZ-4Z1" secondAttribute="bottom" constant="8" symbolic="YES" id="GeE-Zf-IIC"/>
+                            <constraint firstItem="3OB-Ri-KQe" firstAttribute="top" secondItem="yhe-NY-xL1" secondAttribute="bottom" constant="40" id="gA5-y6-bz9"/>
+                            <constraint firstItem="y7C-hZ-4Z1" firstAttribute="centerX" secondItem="iwF-I5-f4j" secondAttribute="centerX" id="kzN-HU-gua"/>
+                            <constraint firstItem="y7C-hZ-4Z1" firstAttribute="centerY" secondItem="iwF-I5-f4j" secondAttribute="centerY" id="yRp-ou-xFL"/>
+                            <constraint firstItem="rZC-KQ-EFJ" firstAttribute="centerX" secondItem="kno-GM-mpS" secondAttribute="centerX" id="ysR-z5-MqC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="rZC-KQ-EFJ" id="ute-cE-iKd"/>
+                        <outlet property="scrollView" destination="kno-GM-mpS" id="PpQ-zs-KY6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="im1-hk-85B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.60000000000002" y="98.50074962518741"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Watch" width="153" height="170"/>
+    </resources>
+</document>
